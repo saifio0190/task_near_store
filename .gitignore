@@ -1,0 +1,9 @@
+*.json
+/config/*
+/views/*
+/routes/*
+.env
+/node_modules/*
+/assets/*
+/custom_logs/*
+/services/*
