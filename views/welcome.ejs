@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--  All your seo part here -->
+	<title>Task  Near Store</title>
+	
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content=" task by sidhant @near store inteview"/>
+<meta name="robots" content="follow,index,max-snippet:-1,max-video-preview:-1,max-image-preview:large"/>
+<link rel="canonical" href="localhost/home" />
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" task near Store">
+<meta property="og:description" content="task by sidhant @near store inteview">
+<meta property="og:url" content="localhost/home">
+<meta property="og:site_name" content="near.store">
+
+<meta property="og:image" content="">
+<meta property="og:image:secure_url" content="">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="562">
+<meta property="og:image:alt" content="Task near Store">
+<meta property="og:image:type" content="image/jpeg">
+
+<!--  Meta tags for twitter and facebook -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link href="/assets/css/styles.css" rel="stylesheet" media="all">
+
+
+ <!-- Include header -->
+</head>
+<body>
+
+
+<h1 class="text-center"> Task Near Store</h1>
+<p>&nbsp</p>
+
+
+
+<div class="row">
+ <div class="col-4">
+ 	 <p>Howwould you get the 2 oldest people in each group? (Ties within grups
+should not yield more results, but give the first 2 in alphabetical
+order).</p>
+ 	<table class="table table-bordered">
+  <thead>
+        
+    <tr>
+   
+   
+        <th scope="col col-3">Person</th>
+        <th scope="col col-3">Group</th>
+        <th scope="col col-3">Age</th>
+      
+   
+    
+   </tr>
+    
+  </thead>
+  <tbody>
+     <%  data.data.forEach(data =>{ %>
+    <tr>
+   
+   
+        <td><%=data.person %></td>
+        <td scope="col col-3"><%=data.grup %></td>
+        <td scope="col col-3"><%=data.age %></dt>
+      
+   
+    
+   </tr>
+    <% }) %>
+    
+   
+    
+  </tbody>
+</table>
+ 	
+ </div>
+  <div class="col-2">
+  
+ <% if(result.status ==1 ){ %>
+<span style="font-size: 60px;"  class="glyphicon glyphicon-chevron-right">  </span>
+<% }else { %> 
+<button id="showresult" style="border: none; background: black;"> <span style="font-size: 60px;"  class="glyphicon glyphicon-step-forward">  </span> </button>
+<% } %>
+  </div>
+  <div class="col-4">
+
+    <div> 
+      <% if(result.status ==1 ){ %>
+      <p> Result</p></div>
+    
+      <table class="table table-bordered">
+  <thead>
+        
+    <tr>
+   
+   
+        <th scope="col col-3">Person</th>
+        <th scope="col col-3">Group</th>
+        <th scope="col col-3">Age</th>
+      
+   
+    
+   </tr>
+    
+  </thead>
+  <tbody>
+     <%  result.data.forEach(data =>{ %>
+    <tr>
+        <% var grup = data.grup %> 
+   
+        <td><%=data.person %></td>
+        <td scope="col col-3"><%=data.grup %></td>
+        <td scope="col col-3"><%=data.age %></dt>
+
+         
+    
+   </tr>
+    <% }) %>
+
+
+    
+   
+    
+  </tbody>
+</table>
+
+<% } %>
+  </div>
+	
+</div>
+
+
+<script type="text/javascript">
+  
+    $('#showresult').click(function(){
+      window.location='/task';
+    })
+  
+</script>
+
+</body>
+</html>
+

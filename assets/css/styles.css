@@ -1,0 +1,6 @@
+body{background: lightblue; font-family: verdana; color: #fff; padding: 30px; }
+p,h1{ text-align: center; }
+#Contact-form{
+	align-items: center;
+	text-align: center;
+}
